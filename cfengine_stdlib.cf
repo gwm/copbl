@@ -648,7 +648,7 @@ vars:
   "cline" string => canonify("$(line)");
 
 replace_patterns:
-  "^(?!$(line)$)$(pattern)$"
+  "^(?!\Q$(line)\E$)$(pattern)$"
           comment => "Replace a pattern here",
      replace_with => value("$(line)"),
           classes => always("replace_done_$(cline)");
